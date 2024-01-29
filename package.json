@@ -1,0 +1,17 @@
+{
+  "name": "jobportal",
+  "version": "1.0.0",
+  "description": "This is a portal for applying for Jobs.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "SET NODE_ENV=production & node app.js",
+    "dev": "nodemon app"
+  },
+  "author": "Bhaskar Haranale",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2"
+  }
+}
