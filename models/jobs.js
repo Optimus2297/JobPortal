@@ -14,7 +14,7 @@ const jobShcema = new mongoose.Schema({
   description: {
     type: String,
     required: [true, "Please enter Job Decription."],
-    maxlength: [1000, "JOb decription cannot exceed 1000 characters."],
+    maxlength: [1000, "Job decription cannot exceed 1000 characters."],
   },
   email: {
     type: String,
@@ -45,7 +45,7 @@ const jobShcema = new mongoose.Schema({
   },
   industry: {
     type: [String],
-    required: true,
+    required: [true, "Please provide industry."],
     enum: {
       values: [
         "Bussiness",
@@ -60,7 +60,7 @@ const jobShcema = new mongoose.Schema({
   },
   jobType: {
     type: String,
-    required: true,
+    required: [true, "Please Enter JobType."],
     enum: {
       values: ["Permanent", "Temporary", "Internship"],
       message: "Please select correct options for job type.",
@@ -68,7 +68,7 @@ const jobShcema = new mongoose.Schema({
   },
   minEducation: {
     type: String,
-    required: true,
+    required: [true, "Please provide minnimum education."],
     enum: {
       values: ["Bachelors", "Masters", "Phd"],
       message: "Please select correct options for Education.",
@@ -80,7 +80,7 @@ const jobShcema = new mongoose.Schema({
   },
   experience: {
     type: String,
-    required: true,
+    required: [true, "Please provide experience."],
     enum: {
       values: [
         "No Experience",
