@@ -5,14 +5,16 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "SET NODE_ENV=production & node app.js",
+    "start": "SET NODE_ENV=production & nodemon app",
     "dev": "nodemon app"
   },
   "author": "Bhaskar Haranale",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.1",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.1.1",
     "node-geocoder": "^4.2.0",
     "slugify": "^1.6.6",
