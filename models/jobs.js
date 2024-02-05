@@ -107,6 +107,11 @@ const jobShcema = new mongoose.Schema({
     type: [Object],
     select: false,
   },
+  user: {
+    type: mongoose.Schema.ObjectId,
+    ref: "User",
+    required: true,
+  },
 });
 
 //creating slug brefore saving top db
@@ -130,4 +135,4 @@ jobShcema.pre("save", function (next) {
 //   };
 // });
 
-module.exports = mongoose.model("job", jobShcema);
+module.exports = mongoose.model("Job", jobShcema);
